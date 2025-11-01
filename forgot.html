@@ -46,7 +46,7 @@
 
     <div class="text-center py-5 mt-5">
       <div class="container mt-5">
-        <h2 class="fw-bold mb-4">部長の名字は？</h2>
+        <h2 class="fw-bold mb-4">部長のフルネームを答えてください。</h2>
         <div class="col-10 col-sm-6 col-md-4 mx-auto">
           <input
             id="answerInput"
@@ -68,12 +68,12 @@
       const answerInput = document.getElementById("answerInput");
       const errorMsg = document.getElementById("errorMsg");
 
-      // 正解
-      const correctAnswer = "浦内";
+      const correctAnswers = ["浦内星", "浦内 星", "浦内　星"];
 
       submitBtn.addEventListener("click", () => {
         const userAnswer = answerInput.value.trim();
-        if (userAnswer === correctAnswer) {
+
+        if (correctAnswers.includes(userAnswer)) {
           window.location.href = "correct.html";
         } else {
           errorMsg.style.display = "block";
