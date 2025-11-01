@@ -37,10 +37,9 @@
   }
 }
 
-/* 「フルネーム」を強調する下線 */
 .underline {
   text-decoration: underline;
-  text-decoration-thickness: 10px; /* 下線の太さ */
-  text-underline-offset: 0px; /* 文字との間隔 */
-  text-decoration-color: rgba(255, 0, 0, 0.5); /* 下線の色（青系、Bootstrapのテーマ色に合わせ） */
+  text-decoration-thickness: 10px;
+  text-underline-offset: 0px;
+  text-decoration-color: rgba(255, 0, 0, 0.2); 
 }
