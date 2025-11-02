@@ -24,15 +24,39 @@
         margin: 0 auto;
       }
 
-      /* 見出し装飾 */
+      /* 大見出し（メインタイトル） */
+      .main-title {
+        font-weight: 800;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: #222;
+        letter-spacing: 0.05em;
+        position: relative;
+      }
+
+      .main-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -0.6rem;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 5px;
+        border-radius: 3px;
+        background: linear-gradient(90deg, #7bd5ff, #c1a1ff);
+      }
+
+      /* 中見出し（セクションタイトル） */
       .section-title {
         position: relative;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding-bottom: 0.6rem;
-        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
         text-align: center;
-        color: #222;
+        color: #333;
       }
 
       .section-title::after {
@@ -41,14 +65,18 @@
         left: 50%;
         bottom: 0;
         transform: translateX(-50%);
-        width: 120px;
-        height: 4px;
+        width: 100px;
+        height: 3px;
         border-radius: 2px;
         background: linear-gradient(90deg, #91e0ff, #c1a1ff);
       }
 
+      /* 画像調整 */
       .img-nazo img {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -59,14 +87,16 @@
         <section class="py-4">
           <p>
             この度は「星を結ぶ宇宙船と失われた記憶の謎」 をプレイしてくださり、ありがとうございました。<br />
-            <!--このサイトでは、「光のかけら」の入手方法～使い方の流れとプレイするだけでは気づきにくい小さなこだわりをまとめています。「こんなこだわりあったんだ！」と感心したり、「これ気づいてた！」と友人に自慢したりとまた違った楽しみ方ができるかと思います。-->
-            このサイトでは、「光のかけら」の入手方法～使い方の流れをまとめています。気づかなかった要素もあるかもしれないので、ぜひ振り返ってみてください。
+            このサイトでは、「光のかけら」の使い方の入手方法からクリアまでの流れをまとめています。気づかなかった要素もあるかもしれないので、ぜひ振り返ってみてください。
           </p>
         </section>
 
+        <!-- 🌟 大見出し -->
+        <h1 class="main-title">謎解説</h1>
+
         <!-- 1. 手に入れ方 -->
         <section id="how-to-get" class="py-4">
-          <h1 class="section-title">「光のかけら」の使い方の入手方法</h1>
+          <h2 class="section-title">「光のかけら」の使い方の入手方法</h2>
           <p>
             まず、「光のかけら」の使い方を知るために、不思議なことに詳しそうなオカルト研究部の活動場所へ向かいました。ところが、部員は離席中のようで、教室には入れませんでした。仕方なく教室の前に貼られたポスターを見てみると、なんと「光のかけら」についての研究成果が掲示されているではありませんか。さらに、QRコードを読み取ると、「光のかけら」に関する情報がまとめられているようでした。<br />
             しかし、貴重な情報のためロックがかかっていました。パスワードはもちろん分からないため、「パスワードが分からない方はこちら」を押すと、部長の名前を問われます。部長の名前はポスターに貼られていた離席中の付箋に書かれていました。「浦内 星」と入力すると、「鍵を5回押せ」と表示されます。パスワード入力画面に戻って鍵のアイコンを5回押すとロックが外れ、内容が見れるようになりました。なんと、パスワード入力はダミーだったのですね。
